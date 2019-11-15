@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.smoi.findAll({}).then(function(dbExamples) {
+    db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
         msg: "Welcome!",
         examples: dbExamples
@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.smoi.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
         example: dbExample
       });

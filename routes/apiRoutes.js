@@ -1,8 +1,7 @@
 console.log("apiRoutes.js");
 
-var db = require("../models");
-
 module.exports = function(app) {
+  
   // When we first enter the home page...
   // GET ROUTE: all smois (NAME, RATING, IMAGE) from all categories in the SMOIS table
   app.get("/home", function(req, res) {
@@ -24,20 +23,24 @@ module.exports = function(app) {
   // If we want to delete a smoi...
   // DELETE ROUTE: delete a smoi from the SMOIS table by it's (:smoi).
   app.delete("/api/products/:smoi", function(req, res) {
-    db.smoi.destroy({ where: { smoi: req.params.smoi_name } }).then(function(results) {
-      res.json(results);
-    });
+    db.smoi
+      .destroy({ where: { smoi: req.params.smoi_name } })
+      .then(function(results) {
+        res.json(results);
+      });
   });
 
   // When we click on a category...
   // GET ROUTE: all smois (NAME, RATING, IMAGE) from the specified category (:category) in the SMOIS table
   app.get("/api/:category", function(req, res) {
-    db.smoi.findAll({
-      where: {smoi_category: req.params.category},
-    }).then(function(results) {
-      console.log(`Here are the results from the GET request: ${results}`);
-      res.json(results);
-    });
+    db.smoi
+      .findAll({
+        where: { smoi_category: req.params.category }
+      })
+      .then(function(results) {
+        console.log(`Here are the results from the GET request: ${results}`);
+        res.json(results);
+      });
   });
 
   // When we signup...
@@ -52,14 +55,16 @@ module.exports = function(app) {
   // When we click on a smoi...
   // GET ROUTE: specific smoi (:id) in the SMOIS table, and all it's information (NAME, RATING, IMAGE) as well as (COMMENTS) associated with it (hasMany) and the user who posted it (belongsTo)
   app.get("/product/:product", function(req, res) {
-    db.smoi.findAll({
-      where: {smoi_name: req.params.product},
-      include: {model: db.comment, as: 'comments' }
-/*       include: {model: db.comment} */
-    }).then(function(results) {
-      console.log(`Here are the results from the GET request: ${results}`);
-      res.json(results);
-    });
+    db.smoi
+      .findAll({
+        where: { smoi_name: req.params.product },
+        include: { model: db.comment, as: "comments" }
+        /*       include: {model: db.comment} */
+      })
+      .then(function(results) {
+        console.log(`Here are the results from the GET request: ${results}`);
+        res.json(results);
+      });
   });
 
   // When we click to make a comment...
@@ -70,14 +75,7 @@ module.exports = function(app) {
       res.json(results);
     });
   });
-
-
-
 };
-
-
-
-
 
 /* 
 When we click on login...
@@ -98,4 +96,3 @@ POST ROUTE: add a new comment (TEXT, RATING) to the COMMENTS table, which is bou
 When we click to create a smoi...
 POST ROUTE: add a new smoi (NAME, CATEGORY, IMAGE) to the SMOIS table
 */
-
