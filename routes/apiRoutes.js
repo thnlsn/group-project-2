@@ -1,7 +1,13 @@
 console.log("apiRoutes.js");
 
 module.exports = function(app) {
-  
+  var db = require("../models");
+  const { checkDuplicate, checkRoles } = require("./verifySignUp");
+  const { verifyToken, LoggOff, isLogin } = require("./verifyJwtToken");
+  // const authJwt = require("./verifyJwtToken");
+  // const controller = require("../controller/controller");
+  const { signup, signin, userContent } = require("../controller/controller");
+
   // When we first enter the home page...
   // GET ROUTE: all smois (NAME, RATING, IMAGE) from all categories in the SMOIS table
   app.get("/home", function(req, res) {
