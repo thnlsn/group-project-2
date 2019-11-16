@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
 console.log("apiRoutes.js");
 
 module.exports = function(app) {
@@ -103,6 +107,7 @@ POST ROUTE: add a new comment (TEXT, RATING) to the COMMENTS table, which is bou
 When we click to create a smoi...
 POST ROUTE: add a new smoi (NAME, CATEGORY, IMAGE) to the SMOIS table
 */
+<<<<<<< HEAD
 =======
 var db = require("../models");
 
@@ -129,3 +134,6 @@ module.exports = function(app) {
   });
 };
 >>>>>>> 75103b7c01413296496432350145041a580ff022
+=======
+
+>>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186

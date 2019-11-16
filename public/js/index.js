@@ -94,6 +94,7 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+
 // handeling rate system
 
 
