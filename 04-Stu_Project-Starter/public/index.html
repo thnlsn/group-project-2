@@ -14,36 +14,61 @@
   </head>
 
 <body>
-  <div class="container-fluid text-center">
-<div class="jumbotron">
-  <h1 class="display-4">SMOi</h1>
-  
-<!--Halima : Header -->
-<div class="navbar-container">
-    <ul class="nav-list">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">New SMOi</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Username</a>
-        </li>
-    </ul>
-    <div class="search-container">
-            <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
+ 
+    <!--Header Beginning-->
+<nav class="navbar">
+    <div class="container-fluid">
+    <div class="navbar-header">
+  <ul class="nav-list">
+    <li class="nav-item">
+<h1>SMOi</h1></li>
+<li class="nav-item">
+
+<!--Header: Search Bar-->    
+<div class="search-container">
+    <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
+</div>
+<div class="btn-container">
+</li>
+    <!--Header: Post New SMOi Modal-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New SMOi</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <form id="cms">
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title">
+                <br />
+                <label for="body">Your Review:</label>
+                <textarea class="form-control" rows="10" id="body"></textarea>
+                <div class="form-group">
+                  <label for="category">Select Category:</label>
+                  <select class="custom-select" id="category">
+                    <option value="Personal">Tech</option>
+                    <option value="Product Review">Clothes</option>
+                    <option value="Political">Books</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-success submit btn-lg">Post</button>
+              </div>
+            </form>
+
+      </div>
     </div>
-    <div class="btn-container">
+  </div>
 
-    <!--BK: Log In and Sign up modals-->
-  <button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-up-modal" >Sign Up</button>
-  <button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-in-modal" >Sign In</button>
+<!--Button trigger modal - Log In and Sign up modals-->
+<button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-in-modal" >Sign In</button>
+<button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-up-modal" >Sign Up</button>
 </div>
 </div>
 </div>
 </div>
 
+<!--Sign In Modal-->
 <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -73,6 +98,7 @@
   </div>
 </div>
 
+<!--Sign Up Modal-->
 <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -103,171 +129,66 @@
     </div>
   </div>
 </div>
-
+</ul>
+</nav>
 <div class="wrapper">
 
-  <!-- Sidebar -->
-  
-  <div class="sidebar"></div>
-  <nav id="sidebar" class="col-sm-3">
+<!-- Sidebar -->
+<nav id="sidebar" class="col-sm-3 sidenav">
     <div class="sidebar-header">
       <h3>Categories</h3>
+      <hr>
   <ul class="list-unstyled components">
       <li class="active">
-          <a href="#" id="categories">Tech</a>
+    <a href="#" id="categories">Tech</a>
       <li>
-          <a href="#" id="categories">Clothes</a>
-        </li>          
+    <hr>
+    <a href="#" id="categories">Clothes</a>
+      </li>          
       <li>
+    <hr>
         <a href="#" id="categories">Books</a>
       </li>          
       </nav>
 
-  </nav>
+
 <!--Right side - main products section-->
 <div class="row center">
   <div class="col-sm-9">
   
-<!-- ***********************Trigger modal by clicking pictures of the products*********************** -->
-  <img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="exampleModalLongTitle">Product Title</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+      <div class="card-deck">
+          <div class="card">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-         <p>SMOi Post...</p>
-          <hr>
-          <p>Comments</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-<!--Second product-->
-<img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Product Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Third product-->
-<img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Product Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--4th Products-->
-<img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Product Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Fifth product-->
-<img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Product Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Sixth product-->
-<img id="myImg" src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="Shoe1" class="sections" style="width:100%;max-width:300px" data-toggle="modal" data-target="#exampleModalCenter">
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Product Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
   </div>
