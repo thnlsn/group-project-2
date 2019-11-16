@@ -1,7 +1,13 @@
-
 console.log("apiRoutes.js");
 
 module.exports = function(app) {
+  let hbscontent = {
+    username: "",
+    signin: false,
+    Tech: false,
+    Books: false,
+    Category: false
+  };
   var db = require("../models");
   const { checkDuplicate, checkRoles } = require("./verifySignUp");
   const { verifyToken, LoggOff, isLogin } = require("./verifyJwtToken");
@@ -12,6 +18,7 @@ module.exports = function(app) {
   // When we first enter the home page...
   // GET ROUTE: all smois (NAME, RATING, IMAGE) from all categories in the SMOIS table
   app.get("/home", function(req, res) {
+    res.render("index", hbscontent);
     db.smoi.findAll({}).then(function(results) {
       console.log(`Here are the results from the GET request: ${results}`);
       res.json(results);
@@ -53,10 +60,15 @@ module.exports = function(app) {
   // When we signup...
   // POST ROUTE: add a new user (USERNAME, PASSWORD) to the USERS table
   app.post("/signup", function(req, res) {
-    db.user.create(req.body).then(function(results) {
-      console.log(`POST request made: NEW USER CREATED`);
-      res.json(results);
-    }).then(checkDuplicate).then(signup);
+    db.user
+      .create(req.body)
+      .then(function(results) {
+        res.render("/signup");
+        console.log(`POST request made: NEW USER CREATED`);
+        res.json(results);
+      })
+      .then(checkDuplicate)
+      .then(signup);
   });
 
   // When we click on a smoi...
@@ -103,4 +115,3 @@ POST ROUTE: add a new comment (TEXT, RATING) to the COMMENTS table, which is bou
 When we click to create a smoi...
 POST ROUTE: add a new smoi (NAME, CATEGORY, IMAGE) to the SMOIS table
 */
-

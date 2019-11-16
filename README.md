@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# SMOI
+=======
+=======
 
 # SMOI
 
+>>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
 # Project Starter
 
 In this activity we will add the provided boilerplate to group project repos.
@@ -39,4 +45,8 @@ In this activity we will add the provided boilerplate to group project repos.
 * Discuss as a group:
 
   * How would you now add changes to this project?
+<<<<<<< HEAD
+>>>>>>> 75103b7c01413296496432350145041a580ff022
+=======
 
+>>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186

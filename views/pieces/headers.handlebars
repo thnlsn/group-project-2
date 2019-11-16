@@ -1,21 +1,157 @@
-<div class="header">
+<!--Header Beginning-->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <h1>SMOi</h1>
+                </li>
+                <li class="nav-item">
+                    <!--Header: Search Bar-->
+                    <div class="search-container">
+                        <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="btn-container">
+                </li>
+                <!--Header: Post New SMOi Modal-->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New
+                    SMOi</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form id="cms">
+                                <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="form-control" id="title">
+                                    <br />
+                                    <label for="body">Your Review:</label>
+                                    <textarea class="form-control" rows="10" id="body"></textarea>
+                                    <div class="form-group">
+                                        <label for="category">Select Category:</label>
+                                        <select class="custom-select" id="category">
+                                            <option value="Personal">Tech</option>
+                                            <option value="Product Review">Clothes</option>
+                                            <option value="Political">Books</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary btn-lg"
+                                        data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success submit btn-lg">Post</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--Header: Button trigger modal - Log In and Sign up modals-->
+                {{#if signin}}
+                <button type="button" class="btn btn-primary logButton" data-toggle="modal"
+                    data-target="#sign-in-modal">Sign In</button>
+
+                <button type="button" class="btn btn-primary logButton" data-toggle="modal"
+                    data-target="#sign-up-modal">Sign Up</button>
         </div>
-        <div class="container-fluid text-center">
-          <div class="jumbotron">
-            <h1 class="display-4">SMOi</h1>
+    </div>
+    </div>
+    </div>
+   
 
-            <button type="button" class="btn btn-primary logButton" data-toggle="modal"
-              data-target="#sign-up-modal">Sign Up</button>
-            <button type="button" class="btn btn-primary logButton" data-toggle="modal"
-              data-target="#sign-in-modal">Sign In</button>
-          </div>
-
-          <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
+    
+    <!--Header: Sign In Modal-->
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel"> Sign In </h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                    <h5 class="modal-title" id="exampleModalLabel"> Sign In </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email</label>
+                            <input type="email" class="form-control" id="sign-in-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="sign-in-password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal">Close</button>
+                    <button id="sign-in-button" type="button">Sign In!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header: Sign Up Modal-->
+    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Sign Up! </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email</label>
+                            <input type="email" class="form-control" id="sign-up-email">
+                            <label for="recipient-name" class="col-form-label">Re-Enter Email</label>
+                            <input type="email" class="form-control" id="sign-up-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="sign-up-password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="sign-up-button" type="button" class="btn btn-primary">Sign Up!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </ul>
+</nav>
+<div class="wrapper">
+    <!--*End of Header Section*-->
+    ​
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-sm-3">
+        <div class="sidebar-header">
+            <h3>Categories</h3>
+            <hr>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    {{#if Tech}}
+                    <a href="#" id="categories">Tech</a>
+                <li>
+                    {{/if}}
+                    <hr>
+                    {{#if Clothes}}
+                    <a href="#" id="categories">Clothes</a>
+                </li> {{/if}}
+                <li>
+                    {{#if Books}}
+                    <hr>
+                    <a href="#" id="categories">Books</a>
+                    {{/if}}
+                </li>
+    </nav>
+    <!--*End of Sidebar*-->
+    ​
+    <!--Right side - main products section-->
+    <div class="row center">
+        <div class="col-sm-9">
+        </div>
+    </div>
+    ​
+    ​

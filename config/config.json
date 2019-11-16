@@ -1,6 +1,7 @@
 {
   "development": {
     "username": "root",
+
     "password": "APscience@1969",
     "database": "smoi_db",
     "host": "localhost",
