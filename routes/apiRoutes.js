@@ -56,7 +56,7 @@ module.exports = function(app) {
     db.user.create(req.body).then(function(results) {
       console.log(`POST request made: NEW USER CREATED`);
       res.json(results);
-    });
+    }).then(checkDuplicate).then(signup);
   });
 
   // When we click on a smoi...
