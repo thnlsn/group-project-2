@@ -1,4 +1,4 @@
-const db = require('../config/db.config');
+const db = require('../config/config');
 const config = require('../config/config');
 const ROLES = config.ROLES;
 const User = db.user;

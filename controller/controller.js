@@ -1,10 +1,9 @@
-CONTROLLERS
 const config = require("../config/config");
-const db = require("../config/db.config");
+const db = require("../config/config");
 const User = db.user;
 const Role = db.role;
 
-const Op = db.Sequelize.Op;
+// const Op = db.Sequelize.Op;
 
 let jwt = require("jsonwebtoken");
 let bcrypt = require("bcrypt");

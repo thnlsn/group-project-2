@@ -10,19 +10,15 @@ var app = express();
 var PORT = process.env.PORT || 3030;
 
 // Middleware
-let express = require('express');
-let app = express();
-
-let bodyParser = require('body-parser')
+let bodyParser = require('body-parser');
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
   }))
 
-  require('./app/router/router')(app);
+  require('./routes/apiRoutes')(app);
 
-const db = require('./app/config/db.config');
 const Role = db.role;
 
 function initial(){
