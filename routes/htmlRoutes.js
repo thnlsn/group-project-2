@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log("htmlRoutes.js");
 
-=======
->>>>>>> 75103b7c01413296496432350145041a580ff022
-=======
-
-console.log("htmlRoutes.js");
-
-
->>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
 var db = require("../models");
 
 module.exports = function(app) {
@@ -25,7 +15,9 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.render("example", {
         example: dbExample
       });

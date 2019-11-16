@@ -2,9 +2,10 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
-var db = require("./models");
+
 
 var app = express();
+const path =require('path');
 var PORT = process.env.PORT || 3030;
 
 // Middleware
@@ -14,7 +15,19 @@ var PORT = process.env.PORT || 3030;
 // app.use(bodyParser.urlencoded({
 //     extended: true
 //   }))
+const hbs = exphbs.create({
+  defaultLayout: "main",
+  layoutsDir: path.join(__dirname, "views/layouts"),
+  partialsDir: path.join(__dirname, "views/pieces")
+});
 
+
+// Handlebars
+app.engine("handlebars", hbs.engine);
+
+app.set("view engine", "handlebars");
+
+var db = require("./models");
 require("./routes/apiRoutes")(app);
 
 const Role = db.role;
@@ -34,16 +47,7 @@ function initial() {
     name: "Logged Off"
   });
 }
-const hbs = exphbs.create({
-  defaultLayout: "main",
-  layoutsDir: path.join(__dirname, "views/layouts"),
-  partialsDir: path.join(__dirname, "views/pieces")
-});
 
-// Handlebars
-app.engine("handlebars", hbs.engine);
-
-app.set("view engine", "handlebars");
 
 //force: true will drop the table if it already exists
 db.sequelize.sync({ force: false }).then(() => {
