@@ -13,7 +13,7 @@ module.exports = function(app) {
   const { verifyToken, LoggOff, isLogin } = require("./verifyJwtToken");
   // const authJwt = require("./verifyJwtToken");
   // const controller = require("../controller/controller");
-  const { signup, signin, userContent } = require("../controller/controller");
+  const { Signup, Signin, userContent } = require("../controller/controller");
 
   // When we first enter the home page...
   // GET ROUTE: all smois (NAME, RATING, IMAGE) from all categories in the SMOIS table
@@ -68,7 +68,20 @@ module.exports = function(app) {
         res.json(results);
       })
       .then(checkDuplicate)
-      .then(signup);
+      .then(Signup);
+  });
+
+  // When we signin...
+  // POST ROUTE: add a new user (USERNAME, PASSWORD) to the USERS table
+  app.post("/signin", function(req, res) {
+    db.user
+      .create(req.body)
+      .then(function(results) {
+        res.render("/signin");
+        console.log(`POST request made: NEW USER CREATED`);
+        res.json(results);
+      })
+      .then(Signin);
   });
 
   // When we click on a smoi...
