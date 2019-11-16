@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 console.log("htmlRoutes.js");
 
+=======
+>>>>>>> 75103b7c01413296496432350145041a580ff022
 var db = require("../models");
 
 module.exports = function(app) {
