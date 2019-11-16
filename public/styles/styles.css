@@ -9,8 +9,6 @@ border: 2px solid black;
 border-radius: 5px;
 }
 
-<<<<<<< HEAD:public/styles/styles.css
-=======
 .wrapper {
   display: flex;
   width: 100%;
@@ -26,6 +24,11 @@ border-radius: 5px;
   width: 100%;
   color: black;
   text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
 }
 
 .modal-header {
@@ -174,4 +177,3 @@ opacity: 1;
   right: 10px;
   font-weight: bold;
 }
->>>>>>> modals:04-Stu_Project-Starter/public/styles/styles.css
