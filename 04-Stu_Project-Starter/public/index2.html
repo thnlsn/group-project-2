@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
+
+</head>
+<div class="header">
+</div>
+<div class="container-fluid text-center">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">SMOi</a>
+        <form class="form-inline">
+            <button type="button" class="btn btn-primary btn-sm">NEW SMOi</button>
+            <button type="button" class="btn btn-primary btn-sm">USERNAME</button>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+  <button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-up-modal" >Sign Up</button>
+  <button type="button" class="btn btn-primary logButton" data-toggle="modal" data-target="#sign-in-modal" >Sign In</button>
+</div>
+
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Sign In </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Email</label>
+            <input type="email" class="form-control" id="sign-in-email">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Password</label>
+            <input type="password" class="form-control" id="sign-in-password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal">Close</button>
+        <button id="sign-in-button" type="button">Sign In!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Sign Up! </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Email</label>
+            <input type="email" class="form-control" id="sign-up-email">
+            <label for="recipient-name" class="col-form-label">Re-Enter Email</label>
+            <input type="email" class="form-control" id="sign-up-email">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Password</label>
+            <input type="password" class="form-control" id="sign-up-password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="sign-up-button" type="button" class="btn btn-primary">Sign Up!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row center">
+  <div class="col-sm-3">
+   <div class= "fontconcert"><p>Categories</p></div>
+   <br>
+   <br>
+   <button type="button" class="btn btn-primary">Tech</button>
+   <br>
+   <br>
+   <button type="button" class="btn btn-primary">Clothing</button>
+   <br>
+   <br>
+   <button type="button" class="btn btn-primary">Books</button>
+   <br>
+   <br>
+   <button type="button" class="btn btn-primary">Toys</button>
+   <br>
+   <br>
+   <button type="button" class="btn btn-primary">Food</button>
+ 
+  </div>
+  <div class="col-sm-9">
+        <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/374306/01/sv01/fnd/PNA" alt="section" class="sections">
+        
+        <img src="https://anninc.scene7.com/is/image/AN/510871_2222?$pdp2x$" alt="section" class="sections">
+  </div>
+  </div>
+</div>
+</div>
+<footer class="container-fluid text-center">
+    <p>Developed by Halima Todd, Berenice Kelly, Thomas Nelson, Xavier Davis</p>
+  </footer>
+</div>
+</body>
+</html>

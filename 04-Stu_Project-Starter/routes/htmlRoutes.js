@@ -1,5 +1,3 @@
-console.log("htmlRoutes.js");
-
 var db = require("../models");
 
 module.exports = function(app) {
