@@ -30,8 +30,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   User.associate = function(db) {
-    User.hasMany(db.comment, { as: "comment", foreignKey: "username" });
-    User.hasMany(db.smoi, { as: "smoi", foreignKey: "username" });
+    User.hasMany(db.comment, { as: "comment", foreignKey: "user_name" });
+    User.hasMany(db.smoi, { as: "smoi", foreignKey: "user_name" });
 
     /*  
         User.hasMany(comment, {as: 'comments', foreignKey: 'user_name'})
