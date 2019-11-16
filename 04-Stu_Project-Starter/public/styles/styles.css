@@ -1,0 +1,10 @@
+.list-group-item {
+  line-height: 2.5;
+}
+
+.sections {
+width: 400px;
+height: 450px;
+border: 2px solid black;
+border-radius: 5px;
+}

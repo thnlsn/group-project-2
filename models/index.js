@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
 console.log("index.js");
 "use strict";
 
@@ -34,6 +37,7 @@ var db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
+
   // else, config with the config object
 =======
 var env = process.env.NODE_ENV || "development";
@@ -41,6 +45,7 @@ var env = process.env.NODE_ENV || "development";
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
 var config = require(__dirname + "/../config/config.json")[env];
 
+<<<<<<< HEAD
 // db object 
 var db = {};
 
@@ -54,6 +59,9 @@ if (config.use_env_variable) {
   // else, config with the config object
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
   var sequelize = new Sequelize(
     config.database,
     config.username,
@@ -62,6 +70,7 @@ if (config.use_env_variable) {
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // read the contents of the current working directory (i.e. $ ls)
@@ -74,6 +83,8 @@ fs.readdirSync(__dirname)
 >>>>>>> 75103b7c01413296496432350145041a580ff022
 =======
 
+=======
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
 // read the contents of the current working directory (i.e. $ ls)
 fs.readdirSync(__dirname)
   .filter(function(file) {
@@ -87,6 +98,7 @@ fs.readdirSync(__dirname)
   .forEach(function(file) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // iterate each js file
     // build model object
 =======
@@ -94,10 +106,18 @@ fs.readdirSync(__dirname)
 =======
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+
+    // build model object
+
+
+
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
     var model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   // for each model, if there is an associate function, call that function and 
@@ -110,12 +130,19 @@ fs.readdirSync(__dirname)
   // pass all the other models as arguments to that function 
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+  // for each model, if there is an associate function, call that function and 
+  // pass all the other models as arguments to that function 
+
+
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // export sequelize as BOTH capital S and normal s
@@ -132,4 +159,14 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 >>>>>>> 75103b7c01413296496432350145041a580ff022
+=======
+
+// export the db object that were building since line 14
+
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
 module.exports = db;

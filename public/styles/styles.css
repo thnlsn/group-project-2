@@ -5,9 +5,177 @@
 
 
 .sections {
-width: 400px;
-height: 450px;
+width: 40%;
+height: 40%;
 border: 2px solid black;
 border-radius: 5px;
 }
 
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#categories {
+  font-size: 18pt;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+}
+
+.modal-header {
+  text-align: center
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~  Halima's CSS ~~~~~~~~~~~~~~~~~~~~~*/
+.container-fluid{
+  background-color: #d79922 !important;
+  padding: 15px;
+  text-align: center;
+  border: 7px solid #b23850;
+ 
+​
+}
+​
+.navbar-brand{
+  color: #b23850 !important;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold !important;
+  font-size: 75px !important; 
+  margin: 0 auto;
+  text-align: center;
+  float : none !important;
+  /*SMOi*/
+  
+} 
+​
+body {
+  text-align: center;
+  color: #b23850;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 15px; 
+  /*tech clothing books*/
+
+}
+​
+.col-sm-3{
+  background-color: #d79922;
+  height: 650px;
+  width: 200PX;
+  
+  border: 2px solid #b23850;
+}
+​
+.row.center{
+  background-color: #efe2ba;
+}
+​
+.btn.btn-primary.logButton{
+  background-color: #4056a1;
+}
+​
+.btn.btn-primary{
+  background-color: #4056a1;
+}
+​
+.fontconcert{
+  font-family: 'Concert One';
+  font-size: 23px;
+  color: #4056a1;
+}
+​
+.navbar.navbar-light.bg-light{
+  font-size: 25px;
+}
+
+/*more css*/
+.navbar-container {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item.active {
+  list-style-type: none;
+}
+.btn-container {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  right:0;
+}
+.nav-list {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  left:0;
+  padding-left: 0 !important;
+}
+.nav-item{
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 15px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.logButton {
+  margin-top : -10px;
+}
+.search-container {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/* Modal CSS:*/
+.modal-background{
+  position: relative;
+  width: 55%;
+  height: 55%;
+  top: 0%;
+  left:0%;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.background-active{
+visibility: visible;
+opacity: 1;
+}
+.modal2{
+  background-color:beige;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+}

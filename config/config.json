@@ -3,9 +3,12 @@
     "username": "root",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
     "password": "APscience@1969",
     "database": "smoi_db",
     "host": "localhost",
@@ -15,6 +18,7 @@
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
     "password": null,
     "database": "exampledb",
@@ -25,6 +29,8 @@
 =======
 
 >>>>>>> 9256c7f439d4d1b51a22247d2e68ed5fbb871186
+=======
+>>>>>>> db702c46d4eb2cfa31c8e0920b18e88175b85366
   },
   "test": {
     "username": "root",
