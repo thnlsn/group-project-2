@@ -1,4 +1,3 @@
-
 console.log("index.js");
 "use strict";
 
@@ -20,7 +19,9 @@ var db = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
+
   // else, config with the config object
+
 
   var sequelize = new Sequelize(
     config.database,
@@ -29,7 +30,6 @@ if (config.use_env_variable) {
     config
   );
 }
-
 
 // read the contents of the current working directory (i.e. $ ls)
 fs.readdirSync(__dirname)
@@ -42,13 +42,17 @@ fs.readdirSync(__dirname)
   })
   .forEach(function(file) {
 
+    // build model object
+
+
+
     var model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;
   });
 
-
   // for each model, if there is an associate function, call that function and 
   // pass all the other models as arguments to that function 
+
 
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
@@ -56,9 +60,12 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
+
 // export the db object that were building since line 14
+
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
 
 module.exports = db;

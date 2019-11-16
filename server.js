@@ -10,12 +10,12 @@ var app = express();
 var PORT = process.env.PORT || 3030;
 
 // Middleware
-let bodyParser = require('body-parser');
+// let bodyParser = require('body-parser');
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-    extended: true
-  }))
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({
+//     extended: true
+//   }))
 
   require('./routes/apiRoutes')(app);
 
