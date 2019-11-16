@@ -134,7 +134,7 @@ body {
 visibility: visible;
 opacity: 1;
 }
-.modal2{
+#modal2{
   background-color:beige;
   width: 60%;
   height: 60%;
