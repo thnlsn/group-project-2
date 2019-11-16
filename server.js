@@ -2,8 +2,6 @@ require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
-
-
 var db = require("./models");
 
 var app = express();
@@ -17,37 +15,38 @@ var PORT = process.env.PORT || 3030;
 //     extended: true
 //   }))
 
-  require('./routes/apiRoutes')(app);
+require("./routes/apiRoutes")(app);
 
 const Role = db.role;
 
-function initial(){
-    Role.create({
-        // id:1,
-        name:"USER"
-    });
+function initial() {
+  Role.create({
+    // id:1,
+    name: "USER"
+  });
 
-    Role.create({
-        // id:2,
-        name:"Signed In"
-    })
-    Role.create({
-        // id:3,
-        name:"Logged Off"
-    });
+  Role.create({
+    // id:2,
+    name: "Signed In"
+  });
+  Role.create({
+    // id:3,
+    name: "Logged Off"
+  });
 }
+const hbs = exphbs.create({
+  defaultLayout: "main",
+  layoutsDir: path.join(__dirname, "views/layouts"),
+  partialsDir: path.join(__dirname, "views/pieces")
+});
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+app.engine("handlebars", hbs.engine);
+
 app.set("view engine", "handlebars");
 
 //force: true will drop the table if it already exists
-db.sequelize.sync({force: false}).then(()=> {
+db.sequelize.sync({ force: false }).then(() => {
   // console.log('Drop and Resync with {force:true}');
   initial();
 });
