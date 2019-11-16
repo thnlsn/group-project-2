@@ -16,20 +16,20 @@
                 <!--Header: Post New SMOi Modal-->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">New
                     SMOi</button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <form id="cms">
+                            <form id="cms1">
                                 <div class="form-group">
                                     <label for="title">Title:</label>
-                                    <input type="text" class="form-control" id="title">
+                                    <input type="text" class="form-control" id="title1">
                                     <br />
                                     <label for="body">Your Review:</label>
-                                    <textarea class="form-control" rows="10" id="body"></textarea>
+                                    <textarea class="form-control" rows="10" id="body1"></textarea>
                                     <div class="form-group">
                                         <label for="category">Select Category:</label>
-                                        <select class="custom-select" id="category">
+                                        <select class="custom-select" id="category4">
                                             <option value="Personal">Tech</option>
                                             <option value="Product Review">Clothes</option>
                                             <option value="Political">Books</option>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!--Header: Button trigger modal - Log In and Sign up modals-->
-                {{#if signin}}
+                {{#unless signin}}
                 <button type="button" class="btn btn-primary logButton" data-toggle="modal"
                     data-target="#sign-in-modal">Sign In</button>
 
@@ -55,15 +55,15 @@
     </div>
     </div>
    
-
+{{/unless}}
     
     <!--Header: Sign In Modal-->
-    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="sign-in-modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> Sign In </h5>
+                    <h5 class="modal-title" id="exampleModalLabel3"> Sign In </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -72,11 +72,11 @@
                     <form>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" id="sign-in-email">
+                            <input type="email" class="form-control" id="sign-in-email3">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Password</label>
-                            <input type="password" class="form-control" id="sign-in-password">
+                            <input type="password" class="form-control" id="sign-in-password4">
                         </div>
                     </form>
                 </div>
@@ -88,12 +88,12 @@
         </div>
     </div>
     <!--Header: Sign Up Modal-->
-    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="sign-up-modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> Sign Up! </h5>
+                    <h5 class="modal-title" id="exampleModalLabel4"> Sign Up! </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -102,19 +102,19 @@
                     <form>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Email</label>
-                            <input type="email" class="form-control" id="sign-up-email">
+                            <input type="email" class="form-control" id="sign-up-email1">
                             <label for="recipient-name" class="col-form-label">Re-Enter Email</label>
-                            <input type="email" class="form-control" id="sign-up-email">
+                            <input type="email" class="form-control" id="sign-up-email2">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Password</label>
-                            <input type="password" class="form-control" id="sign-up-password">
+                            <input type="password" class="form-control" id="sign-up-password1">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="sign-up-button" type="button" class="btn btn-primary">Sign Up!</button>
+                    <button id="sign-up-button6" type="button" class="btn btn-primary">Sign Up!</button>
                 </div>
             </div>
         </div>
@@ -131,19 +131,19 @@
             <hr>
             <ul class="list-unstyled components">
                 <li class="active">
-                    {{#if Tech}}
+                    {{#unless Tech}}
                     <a href="#" id="categories">Tech</a>
                 <li>
-                    {{/if}}
+                    {{/unless}}
                     <hr>
-                    {{#if Clothes}}
+                    {{#unless Clothes}}
                     <a href="#" id="categories">Clothes</a>
-                </li> {{/if}}
+                </li> {{/unless}}
                 <li>
-                    {{#if Books}}
+                    {{#unless Books}}
                     <hr>
                     <a href="#" id="categories">Books</a>
-                    {{/if}}
+                    {{/unless}}
                 </li>
     </nav>
     <!--*End of Sidebar*-->
