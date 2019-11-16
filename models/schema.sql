@@ -1,2 +1,4 @@
+
 DROP DATABASE IF EXISTS smoi_db;
 CREATE DATABASE smoi_db;
+

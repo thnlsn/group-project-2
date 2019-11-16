@@ -1,3 +1,4 @@
+
 console.log("apiRoutes.js");
 
 module.exports = function(app) {
@@ -102,3 +103,4 @@ POST ROUTE: add a new comment (TEXT, RATING) to the COMMENTS table, which is bou
 When we click to create a smoi...
 POST ROUTE: add a new smoi (NAME, CATEGORY, IMAGE) to the SMOIS table
 */
+

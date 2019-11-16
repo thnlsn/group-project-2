@@ -94,6 +94,11 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+
+// handeling rate system
+
+
+
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);

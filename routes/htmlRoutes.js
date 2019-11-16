@@ -1,4 +1,6 @@
+
 console.log("htmlRoutes.js");
+
 
 var db = require("../models");
 
