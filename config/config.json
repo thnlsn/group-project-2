@@ -1,10 +1,18 @@
 {
   "development": {
     "username": "root",
+
+    "password": "APscience@1969",
+    "database": "smoi_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "operatorsAliases": false
+
     "password": null,
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
+
   },
   "test": {
     "username": "root",
