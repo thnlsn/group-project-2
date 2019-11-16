@@ -1,3 +1,6 @@
+
+# SMOI
+
 # Project Starter
 
 In this activity we will add the provided boilerplate to group project repos.
@@ -36,3 +39,4 @@ In this activity we will add the provided boilerplate to group project repos.
 * Discuss as a group:
 
   * How would you now add changes to this project?
+
